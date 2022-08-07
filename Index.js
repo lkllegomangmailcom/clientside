@@ -3,7 +3,7 @@ var mode = 'default';
 const request = require('request');
 
 let Mic = require('mic');
-
+console.log('start up');
 const Spe = require('speaker');
 const mic = Mic({
         rate:44100,
