@@ -32,7 +32,7 @@ stream.pipe(spek);
 mic.start();
 
 function after(modee) {
-    mode=modee;
+
 if (modee!="default") {
   mic.pause();
   
@@ -48,16 +48,17 @@ if (modee!="default") {
      },
        json:true
      }
-  
+      mode=modee;
  request.post(authOptions,function(error, response, body) {
     console.log(body)
   
   })
 } else {
- 
+ if (mode!=modee) {
   mic.resume();
+ }
   console.log('default')
-
+    mode=modee;
 }
 }
 function getMode(){
@@ -75,7 +76,7 @@ function getMode(){
  request.get(authOptions,function(error, response, body) {
     console.log(body.mod)
 
-    after(body.mode);
+    after(body.mod);
 
   
  })
