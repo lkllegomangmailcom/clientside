@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mic": "^2.1.2",
+    "naudiodon": "^2.3.6",
+    "request": "^2.88.2",
+    "speaker": "^0.5.4"
+  }
+}
