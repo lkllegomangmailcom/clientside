@@ -34,7 +34,7 @@ mic.start();
 function after(modee) {
     mode=modee;
 if (modee!="default") {
-  mic.stop();
+  mic.pause();
   
      var authOptions = {
     url: 'https://MusicBackend.212logan.repl.co/pimode/',
@@ -54,8 +54,8 @@ if (modee!="default") {
   
   })
 } else {
-  stream.pipe(spek);
-  mic.start();
+ 
+  mic.resume();
   console.log('default')
 
 }
@@ -73,14 +73,10 @@ function getMode(){
      }
   
  request.get(authOptions,function(error, response, body) {
+    console.log(body.mod)
 
-  var as = "'"+body+"'"; 
-      console.log(as)
-  if (as.includes(mode)) {
-  } else {
-    
     after(body.mode);
-  }
+
   
  })
   }
