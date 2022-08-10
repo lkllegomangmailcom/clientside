@@ -73,8 +73,9 @@ function getMode(){
      }
   
  request.get(authOptions,function(error, response, body) {
-//    console.log(body.mod)
+
   var as = "'"+body+"'"; 
+      console.log(as)
   if (as.includes(mode)) {
   } else {
     
