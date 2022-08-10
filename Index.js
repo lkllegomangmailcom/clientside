@@ -12,8 +12,8 @@ const mic = Mic({
   channels:1,
   device:'hw:1,0',
   bitDepth:16,
-  debug:false,
-  exitOnSilence:6
+  debug:false
+
   });
 
 
@@ -31,10 +31,11 @@ const stream = mic.getAudioStream();
 stream.pipe(spek);
 mic.start();
 
-function after(mode) {
+function after(modee) {
   
-if (mode!="default") {
+if (modee!="default") {
   mic.stop();
+  mode=modee
      var authOptions = {
     url: 'https://MusicBackend.212logan.repl.co/pimode/',
      headers: {
@@ -55,6 +56,8 @@ if (mode!="default") {
 } else {
   stream.pipe(spek);
   mic.start();
+  console.log('default')
+  mode=modee
 }
 }
 function getMode(){
