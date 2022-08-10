@@ -10,7 +10,7 @@ const mic = Mic({
   endian:BigInt,
   rate:44100,
   channels:1,
-  device:'hw:1,0',
+  device:'hw:3,0',
   bitDepth:16,
   debug:false,
   exitOnSilence:6
