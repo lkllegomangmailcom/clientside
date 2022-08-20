@@ -84,7 +84,23 @@ function getMode(){
 setInterval(function() {
 if (va=1){
   va=2
- 
+      var authOptions = {
+    url: 'https://MusicBackend.212logan.repl.co/online/true',
+     headers: {
+    
+       'Content-Type': 'application/json',
+     },
+
+       json:true
+     }
+  
+ request.get(authOptions,function(error, response, body) {
+    console.log(body.mod)
+
+  
+
+  
+ })
 }
     getMode();
 
