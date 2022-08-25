@@ -82,7 +82,7 @@ function getMode(){
  })
   }
 setInterval(function() {
-if (va=1){
+if (va=2){
   va=2
       var authOptions = {
     url: 'https://MusicBackend.212logan.repl.co/online/true',
